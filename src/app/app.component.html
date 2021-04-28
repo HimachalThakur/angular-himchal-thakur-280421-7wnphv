@@ -4,7 +4,7 @@
 <h3 class="col-md-sx">
   <input type="checkbox" value="male" name="male">Male
   <input type="checkbox" value="female" name="female">Female
-  <input type="search" value="search" name="search">
+  <input type="search" value="search" name="search" [(ngModel)]="search" (ngClick)=search(search)>
 </h3>
 
 <table style="width:100%">
@@ -27,10 +27,10 @@
 
 
 <h1>Add New Candidate</h1>
-First Name <input type="text" name="a" [(ngModel)]=student.fname><br>
-<a>{{fname}}</a>
-Last Name <input type="text"><br>
-  Email <input type="email"><br>
-  Male <input type="radio"><br>
-   Female <input type="radio"><br>
-<input type="submit">
+First Name <input type="text" [(ngModel)]="obj.first_name" ><br>
+
+Last Name <input type="text" [(ngModel)]="obj.last_name"><br>
+  Email <input type="email" [(ngModel)]="obj.email"><br>
+  Male <input type="radio" value="male"[(ngModel)]="obj.gender"><br>
+   Female <input type="radio" value="female" [(ngModel)]="obj.gender"><br>
+<input type="submit" (ngClick)=submit(obj)>

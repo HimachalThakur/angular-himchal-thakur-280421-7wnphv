@@ -7,13 +7,20 @@ import { Component, VERSION } from "@angular/core";
 })
 export class AppComponent {
   name = "Angular " + VERSION.major;
+  obj = {
+    id: 1,
+    first_name: "Jeanette",
+    last_name: "Penddreth",
+    email: "jpenddreth0@census.gov",
+    gender: "Female"
+  };
 
   student = {
-    id: null,
-    fname: null,
-    lname: null,
-    email: null,
-    geneder: null
+    id: 1,
+    fname: "abc",
+    lname: "abc",
+    email: "gmail",
+    geneder: "male"
   };
 
   jsonObj = [
@@ -46,4 +53,20 @@ export class AppComponent {
       gender: "Male"
     }
   ];
+
+  search(str) {
+    console.log("serch called");
+  }
+
+  submit(obj: {
+    id: number;
+    first_name: string;
+    last_name: string;
+    email: string;
+    gender: string;
+  }) {
+    console.log("submit called");
+    alert("hello");
+    this.jsonObj.push(obj);
+  }
 }
