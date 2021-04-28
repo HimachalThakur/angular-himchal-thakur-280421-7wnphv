@@ -1,4 +1,36 @@
 <hello name="{{ name }}"></hello>
-<p>
-  Start editing to see some magic happen :)
-</p>
+
+<h1>Candidates</h1>
+<h3 class="col-md-sx">
+  <input type="checkbox" value="male" name="male">Male
+  <input type="checkbox" value="female" name="female">Female
+  <input type="search" value="search" name="search">
+</h3>
+
+<table style="width:100%">
+  <tr>
+    <th>#</th>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Email</th>
+    <th>Gender</th>
+  <tr>
+
+  <tr *ngFor="let obj of jsonObj">
+    <td>{{obj.id}}</td>
+    <td>{{obj.first_name}}</td>
+    <td>{{obj.last_name}}</td>
+    <td>{{obj.email}}</td>
+    <td>{{obj.gender}}</td>
+  <tr>
+</table>
+
+
+<h1>Add New Candidate</h1>
+First Name <input type="text" name="a" [(ngModel)]=student.fname><br>
+<a>{{fname}}</a>
+Last Name <input type="text"><br>
+  Email <input type="email"><br>
+  Male <input type="radio"><br>
+   Female <input type="radio"><br>
+<input type="submit">
